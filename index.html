@@ -8,24 +8,44 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header class="jumbotron">
-        <h1 class="display-3">Weather Dashboard</h1>
-        <p id="currentDay" class="lead"></p>
+    <header class="container" id="header">
+        <h1>Weather Dashboard</h1>
     </header>
-    <div class = "searchPanel">
-        <form id = "searchForm" >
+    <div class = "col-two-container" id= "searchPanel">
+        <form id = "searchCity" >
             <label>Search for a City:</label>
-            <input type ="text" id ="cityInput"  placeholder="ex. Austin"></input>
-            <button type = "submit" class = "btn saveBtn" id="addCity" ><i class="fas fa-save"></i></button>
+            <input type ="text" id ="cityInput"  placeholder="ex. Austin, TX"></input>
+            <button type = "submit" id="addCity" ><i class="fas fa-search"></i></button>
         </form>
-        <div id= "cityBlock"></div>
-        <div id = "clear">Clear All</div>
-     </div>
-    <div class ='base group'>
-        <div id= "todaysWeather"></div>
-    <div class = "WeatherIcon"></div>
-    <p class = "forcast" >5 day forecast</p>
-    <div id = "5Day"></div>
+        <div id= "cityHistory"></div>
+        <button type="submit" id = "clear">Clear All</button>
+    </div>
+    <div class="col-ten-container" style="align-content: center;">
+        <div class="forecast">
+            <div class="row" >
+                <h1 class="cityName">City Name</h1>
+                <h1 class="currentDate"></h1>
+                <img class="weatherIcon"></img>
+            </div>
+
+
+            <div class="row">
+            <p class="temp">Temperature:</p> </div>
+            <div class ="row">
+            <p class="humidity">Humidity:</p>
+            </div>
+            <div class ="row">
+            <p class= "uvIncex">UV Index:</p>
+            </div>
+            <div class ="row">
+            <p class = "windSpeed">Wind Speed:</p>
+            </div>
+
+        </div>
+
+        <div class ='row' id= "forecast">
+        <p class = "forcast" >5 day forecast</p>
+        <div id = "5Day"></div>
     </div>
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/3.2.1/jquery.min.js"></script>
