@@ -1,16 +1,7 @@
-var apiKey = "f50d4e4ff9dde554472432d69049aa55";
+var apiKey = "5a64db990c6192cd3e271535b40916f6";
 
 var cityInput = $(".cityInput");
 var searchBtn = $(".searchBtn");
-
-// searchBtn.on("click", function(e) {
-//     console.log("clicked button")
-//     getCurrentWeather(cityInput.val());
-// });
-
-// to figure out local storage
-// localStorage.getItem ("cityList")
-// appendSearchHistory();
 
 var cityName = $(".cityName");
 var todaysDate = $(".todaysDate");
@@ -51,12 +42,12 @@ function getSearchHistory (){
 function appendSearchHistory(placeholderCity){
     cityHistory.empty();
     var cityHistoryArr = JSON.parse(localStorage.getItem("cityHistory"));
-    for (let i = 0; i < cityHistoryArr.length[i]; i++) {
-        let newCity = $("<li>").attr("class", "newCity");
+    // for (var i = 0; i < cityHistoryArr.lengt; i++) {
+        var newCity = $("<li>").attr("class", "newCity");
 
-        newCity.text(cityHistoryArr[i]);
-        cityHistory.prepend(newListItem);
-    }
+        // newCity.text(cityHistoryArr[i]);
+        cityHistory.prepend(placeholderCity);
+    // }
 }
 
 function getCurrentWeather (searchCity) {
