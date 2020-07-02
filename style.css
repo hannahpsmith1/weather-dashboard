@@ -1,10 +1,8 @@
-html{
-    height:100%;
-}
-
-body{
-    height: 100%;
-    margin:0;
+*,
+*::after,
+*::before {
+margin: 0;
+padding: 0;
 }
 
 button{
@@ -12,6 +10,7 @@ button{
     height: auto;
     background-color: blueviolet;
     border-radius: 5px;
+    margin: 2px;
 }
 
 button:hover {
@@ -19,13 +18,8 @@ button:hover {
 }
 
 .clearAll {
-    background-color: cadetblue;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    border-top: 0px;
-    border-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 5px;
+    padding: 5px;
 }
 
 header {
@@ -37,3 +31,19 @@ header {
     color:black;
     background-color:blueviolet;
 }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 640px;
+    height: 100%;
+}
+
+
+
+.searchCol{
+    background-color: burlywood;
+
+}
+
+
