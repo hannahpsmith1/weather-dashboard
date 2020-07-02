@@ -1,3 +1,5 @@
+
+// new API key because getting a 401 error with the old one
 var apiKey = "5a64db990c6192cd3e271535b40916f6";
 
 var cityInput = $(".cityInput");
@@ -13,24 +15,26 @@ var weatherIcon = $(".weatherIcon");
 var cityHistory = $(".cityHistory");
 
 if (JSON.parse(localStorage.getItem("searchHistory")) === null) {
-    console.log("searchHistory not found")
+    console.log("no history")
 }else{
-    console.log("searchHistory loaded into cityHistoryArr");
+    console.log("yes history");
     appendSearchHistory();
 }
 
-searchBtn.on("click", function(e) {
-    console.log("clicked button")
+console.log("local storage check worked");
+
+searchBtn.on("click", function(x) {
+    console.log("search button")
     getCurrentWeather(cityInput.val());
 });
 
 
-// $(document).on("click", ".newCity", function() {
-//     console.log("clicked history item")
-//     let thisElement = $(this);
-//     getWeather(thisElement.text());
-// })
+$(document).on("click", function() {
+    var thisElement = $(this);
+    getCurrentWeather(thisElement.text());
+})
 
+getSearchHistory();
 
 
 function getSearchHistory (){
@@ -38,22 +42,24 @@ function getSearchHistory (){
     appendSearchHistory();
 
 }
+console.log("hhelp")
+getCurrentWeather();
 
 function appendSearchHistory(placeholderCity){
-    cityHistory.empty();
-    var cityHistoryArr = JSON.parse(localStorage.getItem("cityHistory"));
-    // for (var i = 0; i < cityHistoryArr.lengt; i++) {
+    var cityHistoryArray =localStorage.getItem(".cityHistory");
+    for (var i = 0; i < cityHistoryArray.length; i++) {
         var newCity = $("<li>").attr("class", "newCity");
 
-        // newCity.text(cityHistoryArr[i]);
+        newCity.text(cityHistoryArr[i]);
         cityHistory.prepend(placeholderCity);
-    // }
+    }
 }
 
-function getCurrentWeather (searchCity) {
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&APPID=${apiKey}&units=imperial";
-    https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=f50d4e4ff9dde554472432d69049aa55
+console.log("54")
 
+function getCurrentWeather (searchCity) {
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&APPID=" + apiKey + "&units=imperial";
+// I'm getting a 400 error here
     
     $.ajax({
         url: queryURL,
