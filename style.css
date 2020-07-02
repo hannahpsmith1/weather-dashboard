@@ -1,0 +1,39 @@
+html{
+    height:100%;
+}
+
+body{
+    height: 100%;
+    margin:0;
+}
+
+button{
+    width: auto;
+    height: auto;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+.clearAll {
+    background-color: cadetblue;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header {
+    width: auto;
+    height: 100px;
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 0;
+    color:black;
+    background-color:blueviolet;
+}
