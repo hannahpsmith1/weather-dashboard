@@ -3,6 +3,38 @@ var apiKey = "f50d4e4ff9dde554472432d69049aa55";
 var cityInput = $(".cityInput");
 var searchBtn = $(".searchBtn");
 
+searchBtn.on("click", function(e) {
+    console.log("clicked button")
+    getWeather(cityInput.val());
+});
+
+// to figure out local storage
+
+function get search history (){
+
+}
+
+function render search history (){
+
+}
+
+function get current weather data () {
+
+}
+
+function render weather data () {
+
+}
+
+function get five day weather data () {
+
+}
+
+function render five day weather data () {
+
+}
+
+
 var temperatureEl = $(".temp");
 var humidityEl = $(".humidity");
 var uvIndexEl = $(".uvIndex");
@@ -25,8 +57,3 @@ todaysDate.text('($date})')
 src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
 console.log((moment(todaysDate).format("MM/DD/YYYY")))
 // moment(testDate).format('MM/DD/YYYY');
-
-searchBtn.on("click", function(e) {
-    console.log("clicked button")
-    getWeather(cityInput.val());
-});
