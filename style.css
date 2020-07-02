@@ -35,15 +35,35 @@ header {
 .container {
     display: flex;
     flex-direction: row;
-    max-width: 640px;
     height: 100%;
 }
 
 
-
 .searchCol{
     background-color: burlywood;
+    height: 500px;
+    text-align: center;
 
+}
+
+.card-row {
+    display: flex;
+    float: down;
+    flex-direction: row;
+}
+
+.cityForecast {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.fiveDayForecast {
+    margin-left: 50px;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    font-size: 12px;
+    background-color: teal;
 }
 
 
