@@ -29,7 +29,7 @@ searchBtn.on("click", function(x) {
 });
 
 
-$(document).on("click", function() {
+$(document).on("click", function(y) {
     var thisElement = $(this);
     getCurrentWeather(thisElement.text());
 })
@@ -75,7 +75,7 @@ function getCurrentWeather (searchCity) {
             iconName: weatherDetails.weather [0].icon
         }
     })
-    appendSearchHistory ();
+    appendCurrentWeather ();
 }
 
 function appendCurrentWeather (name, temp, humidity, windSpeed, UVIndex, iconName) {
@@ -102,9 +102,10 @@ function appendFiveDay () {
 
 
 // style update function from other homework to be used on UV Index
-
+// below is what was used in the other homework
 // setInterval(function(){styleUpdate() }, 900000);
 
+// working with moment.js to get todays date in the correct format
 // var date =$("todaysDate").text(moment().format("MM/DD/YYYY"));
 // todaysDate.text('($date})')
 
