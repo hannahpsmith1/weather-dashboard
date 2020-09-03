@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>The Weather is On</title>
+</head>
+
+<body>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col citySearch">
+            <h4 id="searchText">Search for a City:</h4>
+            <form class="form-inline">
+                <div class="form-group form-row">
+                    <div class="form-col">
+                        <label class="sr-only" for="city">City</label>
+                        <input type="text" class="form-control flex-wrap" id="city"
+                            placeholder="ex. Austin,TX">
+                    </div>
+                    <div class="form-col">
+                        <button type="submit" id="search"
+                            class="btn btn-danger d-inline-flex">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-9">
+            <div class="row" id="Searched-Image">
+                <div class="col-5">
+                    <h3>Current Weather
+                </div>
+                <div class="col" id="date">Date</div>
+                <div class="col cityName" id="city">City<br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4" id="today-stats">
+                    <ul>
+                        <dd>Temperature:
+                            <span id="temp" class="font-weight-bold" style="margin:5px"></span></dd>
+                        <dd class="data">Humidity:
+                            <span id="humidity" class="font-weight-bold"></span></dd>
+                        <dd class="data">Wind Speed:
+                            <span id="windspeed" class="font-weight-bold"></span></dd>
+                        <dd class="data">UV Index:
+                            <span id="uv" class="font-weight-bold"></span></dd>
+                            <dd class="data">AQI Index:
+                                <span id="aqi" class="font-weight-bold"></span></dd>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 id="icon"><br>
+                        <span id="description" class="text-center">description</span>
+                    </h4>
+                </div>
+                <div class="col-3">
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="weekDay">5-Day Forecast</h4>
+                    </div>
+                </div>
+                <div class="row pt-3" id="forecastDiv">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<i class="weather-conditon"></i>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

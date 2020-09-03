@@ -1,68 +1,69 @@
-*,
-*::after,
-*::before {
-margin: 0;
-padding: 0;
-}
-
-button{
-    width: auto;
-    height: auto;
-    background-color: blueviolet;
-    border-radius: 5px;
-    margin: 2px;
-}
-
-button:hover {
+.citySearch {
     background-color: pink;
+    float: left;
 }
 
-.clearAll {
-    margin: 5px;
-    padding: 5px;
+
+#Searched-Image {
+    background-color: magenta;
+    color: wheat;
+    padding: 1%;
+    height: 70px;
+    width: 85%;
+    overflow: hidden;
 }
 
-header {
-    width: auto;
-    height: 100px;
+
+.city{
+    font-size: 22px;
+    text-align: right;
+    float: right;
+}
+
+#date {
+    font-size: 22px;
+    font-weight: normal;
     text-align: center;
-    font-size: xx-large;
-    margin-top: 0;
+}
+
+.weekDay {
+    background-color: magenta;
+    color: white;
+    padding: 10px;
+margin:5px;
+}
+#forecast-div {
+    margin-left: 1px;
+}
+
+
+#searchText {
+    padding: 6px;
     color:black;
-    background-color:blueviolet;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+.card {
+    background-color: rgb(220, 227, 222);
+}
+.low {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+
 }
 
-
-.searchCol{
-    background-color: lightblue;
-    height: 500px;
-    text-align: center;
-}
-
-.card-row {
-    display: flex;
-    float: down;
-    flex-direction: row;
-}
-
-.cityForecast {
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.fiveDayForecast {
-    margin-left: 50px;
-    width: auto;
-    height: auto;
-    border-radius: 3px;
-    font-size: 12px;
-    background-color:lightblue;
+.mid{
+    background-color: yellow;
+    color: white;
 }
 
 
+.high {
+    background-color: red;
+    color: white;
+}
+
+#city {
+    font-size: 22px;
+
+}
